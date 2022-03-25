@@ -5,18 +5,22 @@ import matplotlib.pyplot as plt          # For plotting
 def f(x):                                       #  defines the function 
     x1 = x[0]
     x2 = x[1]
+
     f1=2.0*np.exp(x1*x2) - 2.0*x1 + 2.0*x2 - 2.0
     f2=x1**5 + x1*x2**5 - 2.0*x2
+
     fval = np.array([f1,f2])
     return fval
 
 def Df(x):                                      #  defines the Jacobian
     x1 = x[0]
-    x2 = x[1]    
+    x2 = x[1] 
+
     J11 = 2.0*np.exp(x1*x2)*x2 - 2.0
     J12 = 2.0*np.exp(x1*x2)*x1 + 2.0
     J21 = 5.0*x1**4 + x2**5
     J22 = 5.0*x1*x2**4 - 2.0
+    
     Jac = np.array([[J11,J12],[J21,J22]])
     return Jac
 
