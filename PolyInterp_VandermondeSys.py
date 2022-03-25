@@ -31,6 +31,7 @@ a_coeff = scipy.linalg.solve(V,y)
 #computes y = p(x) for interpolant, for all x in xx
 #yy = NewtonPolyEval(a_coeff,x,xx)
 yy = MonoPolyEval(a_coeff,xx)
+# print('yy = ', yy)
 
 
 plt.plot(x, y, 'o',xx,yy, '-b', xx, yy2, '--')

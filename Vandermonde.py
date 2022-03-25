@@ -8,7 +8,6 @@ def VanderMatrix(xs):
     
     
     for j in range(Np1):
-        
         M[:,j] = V[:,Np1-j-1]
         
     return M
