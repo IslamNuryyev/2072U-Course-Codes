@@ -8,7 +8,7 @@ y = np.cos(-x**2/9.0)
 f = interp1d(x, y)
 
 xx = np.linspace(0, 10, 100)
-yy = f(xx) #interpolation
+yy = f(xx) #interpolant
 
 plt.plot(x, y, 'o', xx, yy, '-r')
 plt.show()

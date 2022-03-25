@@ -6,6 +6,8 @@ import scipy.linalg
 from Vandermonde import VanderMatrix
 from Vandermonde import MonoPolyEval
 
+# interpolation using monomial basis (Vandermonde system)
+
 endpoint = np.pi/2.0
 NumIterpPts= 5
 
@@ -28,9 +30,9 @@ yy2 = np.sin(xx)
 V = VanderMatrix(x)
 a_coeff = scipy.linalg.solve(V,y)
 
-#computes y = p(x) for interpolant, for all x in xx
+
 #yy = NewtonPolyEval(a_coeff,x,xx)
-yy = MonoPolyEval(a_coeff,xx)
+yy = MonoPolyEval(a_coeff,xx) #interpolant, computes y = p(x) for interpolant, for all x in xx
 # print('yy = ', yy)
 
 
